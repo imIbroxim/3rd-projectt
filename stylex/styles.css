@@ -2,32 +2,27 @@
   box-sizing: border-box;
 }
 
-body {
+.container {
   display: flex;
   justify-content: center;
   font-family: 'Bebas Neue', cursive;
   width: 90%;
-  height: 782px;
   margin: auto;
   background-color: #e5e5e5;
-
   /* font-family: 'Roboto Condensed', sans-serif; */
 }
 p {
   margin: 0;
 }
-
 .site-promo {
+  padding-top: 326px;
+  padding-bottom: 326px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 600px;
   background-image: url(/img/nature.jpg);
   background-repeat: no-repeat;
-  background-size: ;
-}
-.site-promo-wrapper {
-  
 }
 .title {
   font-weight: 400;
@@ -36,6 +31,8 @@ p {
   letter-spacing: 2px;
 }
 .title--white {
+  margin-top: 0;
+  margin-bottom: 24px;
   width: 285px;
   color: #fff;
 }
@@ -64,11 +61,17 @@ p {
 }
 .last-videos {
   width: 600px;
-  padding: 0 54px;
+  padding: 54px;
   background-color: #fff;
 }
 .title--black {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+.video-card__title-link {
+  text-decoration: none;
   color: #222;
+  transition: .4s ease;
 }
 .video-list {
   padding-top: 24px;
@@ -77,7 +80,6 @@ p {
 }
 .video-card {
   display: flex;
-
   margin-bottom: 10px;
 }
 .video-card:last-child {
@@ -97,13 +99,12 @@ p {
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 2px;
-  color: #222222;
-  transition: .4s ease;
+  color: #222;
 }
-.video-card__title:hover {
+.video-card__title:hover .video-card__title-link{
   color: #1e90ff;
 }
-.video-card__title:active {
+.video-card__title:active .video-card__title-link{
   color: rgba(30, 144, 255, 0.6);
 }
 .video-card__desc {
@@ -122,9 +123,6 @@ p {
 .video-card__publish-date {
   margin-right: 25px;
   display: flex;
-}
-.video-card__publish-date-text {
-  
 }
 .video-card__viewing-info::before {
   width: 14.67px;
@@ -146,6 +144,7 @@ p {
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
+  border-radius: 4px;
   color: #FFFFFF;
   background-color: #1e90ff;
   border: 0;
