@@ -68,7 +68,7 @@ p {
   line-height: 24px;
   letter-spacing: 2px;
   text-decoration: none;
-  transition: .4s ease;
+  transition:background-color .4s ease;
 }
 .site-promo__link:hover{
   background-color: rgba(30, 144, 255, 0.8);
@@ -168,7 +168,7 @@ p {
   color: #FFFFFF;
   background-color: #1e90ff;
   border: 0;
-  transition: .4s ease;
+  transition:background-color .4s ease;
 }
 .view-more:hover {
   background-color: rgba(30, 144, 255, 0.8);
