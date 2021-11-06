@@ -1,30 +1,43 @@
 *,*::before, *::after {
   box-sizing: border-box;
 }
-
-.container {
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  font-family: 'Bebas Neue', "Arial", sans-serif;
+}
+p {
+  margin: 0;
+}
+.main-content {
+  height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-family: 'Bebas Neue', cursive;
   width: 90%;
   margin: auto;
   background-color: #e5e5e5;
   /* font-family: 'Roboto Condensed', sans-serif; */
 }
-p {
-  margin: 0;
+.main-content-wrapper {
+  display: flex;
+  flex-grow: 1;
 }
+
+/* SITE-PROMO  */
 .site-promo {
-  padding-top: 326px;
-  padding-bottom: 326px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 600px;
-  background-image: url(/img/nature.jpg);
+  width: 50%;
+  background-image:url(/img/nature.jpg);
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 .title {
+  margin-top: 0;
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
@@ -32,9 +45,16 @@ p {
 }
 .title--white {
   margin-top: 0;
-  margin-bottom: 24px;
-  width: 285px;
   color: #fff;
+}
+.title--black {
+  color: #222;
+}
+.title__site-promo {
+  width: 285px;
+}
+.title__site-promo, .last-videos__title {
+  margin-bottom: 24px;
 }
 .site-promo__img {
   margin-right: 12px;
@@ -59,14 +79,12 @@ p {
 .site-promo__link-text {
   text-transform: uppercase;
 }
+
+/* LAST VIDEOS  */
 .last-videos {
-  width: 600px;
+  width: 50%;
   padding: 54px;
   background-color: #fff;
-}
-.title--black {
-  margin-top: 0;
-  margin-bottom: 24px;
 }
 .video-card__title-link {
   text-decoration: none;
@@ -86,6 +104,7 @@ p {
   margin-bottom: 0;
 }
 .video-card__img {
+  flex-shrink: 0;
   border-radius: 4px;
   margin-right: 16px;
 }
@@ -101,18 +120,19 @@ p {
   letter-spacing: 2px;
   color: #222;
 }
-.video-card__title:hover .video-card__title-link{
+.video-card__title-link:hover{
   color: #1e90ff;
 }
-.video-card__title:active .video-card__title-link{
+.video-card__title-link:active{
   color: rgba(30, 144, 255, 0.6);
 }
 .video-card__desc {
   display: flex;
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto Condensed', "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
-  color: #888888;
+  color: #888;
+  white-space: nowrap;
 }
 .video-card__publish-date::before {
   width: 13.33px;
@@ -125,9 +145,9 @@ p {
   display: flex;
 }
 .video-card__viewing-info::before {
+  content: url(/img/eye.svg);
   width: 14.67px;
   height: 10px;
-  content: url(/img/eye.svg);
   margin-right: 5px;
 }
 .video-card__viewing-info {
